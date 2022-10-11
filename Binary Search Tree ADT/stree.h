@@ -25,6 +25,10 @@ public:
         root = nullptr;
     }
     
+    int returnRoot() {
+        return root->data;
+    }
+    
     bool isEmpty() {
         if (root == nullptr) {
             return true;

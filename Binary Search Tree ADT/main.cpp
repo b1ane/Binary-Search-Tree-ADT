@@ -33,12 +33,18 @@ int main() {
         tree.insert(num);
     }
     
-    //tree.pre();
-    //cout << endl;
     
-    //tree.post();
-    //cout << endl;
+    //check if root is odd or even
+    int x = tree.returnRoot();
     
+    if (x % 2 == 0) {
+        tree.post();
+    }
+    else {
+        tree.pre();
+    }
+
+    cout << endl;
     tree.findnth(nth);
 
     

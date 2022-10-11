@@ -6,9 +6,27 @@
 //
 
 #include <iostream>
+using namespace std;
+#include <sstream>
+#include <string>
+#include "stree.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+int main() {
+    
+    string input;
+    getline(cin, input);
+    
+    int num;
+    stringstream ss(input);
+    
+    stree tree;
+    
+    while(ss>>num) {
+        tree.insert(num);
+    }
+    
+    tree.pre();
+    
     return 0;
 }

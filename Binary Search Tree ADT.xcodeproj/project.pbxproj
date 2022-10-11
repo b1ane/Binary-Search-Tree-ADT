@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		A6B7978D28EB67F70076D83A /* Binary Search Tree ADT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Binary Search Tree ADT"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B7979028EB67F70076D83A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A6B7979728EB691C0076D83A /* stree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stree.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				A6B7979028EB67F70076D83A /* main.cpp */,
+				A6B7979728EB691C0076D83A /* stree.h */,
 			);
 			path = "Binary Search Tree ADT";
 			sourceTree = "<group>";

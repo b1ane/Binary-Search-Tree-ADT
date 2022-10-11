@@ -85,6 +85,19 @@ public:
         preOrder(root);
     }
     
+    void postOrder(node* r) {
+        if(r == nullptr) {
+            return;
+        }
+        postOrder(r->left);
+        postOrder(r->right);
+        cout << r->data << " ";
+    }
+    
+    void post() {
+        postOrder(root);
+    }
+    
     
     
     

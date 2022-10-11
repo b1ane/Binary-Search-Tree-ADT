@@ -27,6 +27,10 @@ int main() {
     }
     
     tree.pre();
+    cout << endl;
+    
+    tree.post();
+    cout << endl;
     
     return 0;
 }

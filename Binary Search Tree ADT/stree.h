@@ -9,6 +9,7 @@
 #define stree_h
 #include <iostream>
 using namespace std;
+#include<vector>
 
 struct node {
     int data;
@@ -96,6 +97,47 @@ public:
     
     void post() {
         postOrder(root);
+    }
+    
+    //find nth largest item
+    //EX: 2 for 1 3 2 5 4 -- output: 4
+    
+    //theory: traverse in order, insert values in order and pushes into vector, then sort through vector to find nth val
+    void inOrder(node* r, vector<int>& vec) {
+        if( r == nullptr ) {
+            return;
+        }
+        inOrder(r->left, vec);
+        vec.push_back(r->data);
+        inOrder(r->right, vec);
+    }
+
+    int nth(node* r, int key) {
+        int retVal = 0;
+        
+        if(r == nullptr) {
+            return 0;
+        }
+        
+        vector<int>myVec;
+        inOrder(root,myVec);
+        
+        unsigned long x = myVec.size();
+
+        //reverse vector, store in another vector
+        vector<int>newVec;
+        for( unsigned long i = x - 1; i < x; i--) {
+            newVec.push_back(myVec.at(i));
+        }
+        
+        retVal = newVec.at(key-1);
+        return retVal;
+    }
+    
+   
+    //user facing function
+    void findnth(int key) {
+        cout << nth(root, key) << endl;
     }
     
     
